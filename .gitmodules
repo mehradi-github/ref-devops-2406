@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/mehradi-github/ref-graphql-devops-2406.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/mehradi-github/ref-react-devops-2406.git
