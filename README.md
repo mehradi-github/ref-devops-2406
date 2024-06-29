@@ -1,13 +1,16 @@
 # CI/CD with Kubernetes, Docker
 
 - [CI/CD with Kubernetes, Docker](#cicd-with-kubernetes-docker)
-  - [prerequsit](#prerequsit)
+  - [Prerequisites](#prerequisites)
+    - [Adding a Submodule](#adding-a-submodule)
     - [Installing Docker ](#installing-docker-)
     - [Kubernetes Cluster installation using minikube](#kubernetes-cluster-installation-using-minikube)
   - [Set up Ingress on Minikube with the NGINX Ingress Controller](#set-up-ingress-on-minikube-with-the-nginx-ingress-controller)
   - [Skaffold](#skaffold)
 
-## prerequsit
+## Prerequisites
+
+### [Adding a Submodule](https://github.com/mehradi-github/microservices-ticketing?tab=readme-ov-file#adding-a-submodule)
 
 ### [Installing Docker ](https://github.com/mehradi-github/ref-devops-flow?tab=readme-ov-file#installing-docker-on-ubuntu-2204-lts)
 
