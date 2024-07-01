@@ -4,7 +4,7 @@ metadata:
   name: postgres-pv
   labels:
     type: local
-    app: postgres
+    app: postgres-pv
 spec:
   storageClassName: manual
   capacity:
@@ -18,7 +18,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: postgres-pvc
   labels:
-    app: postgres
+    app: postgres-pvc
 spec:
   storageClassName: manual
   accessModes:
@@ -32,6 +32,7 @@ kind: Deployment
 metadata:
   name: postgres
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: postgres
@@ -60,3 +61,17 @@ spec:
         - name: postgres-data
           persistentVolumeClaim:
             claimName: postgres-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-svc
+  labels:
+    app: postgres-svc
+spec:
+  type: NodePort
+  selector:
+    app: postgres
+  ports:
+    - port: 5432
+      targetPort: 5432
